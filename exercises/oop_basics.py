@@ -1,12 +1,3 @@
-"""
-练习: 面向对象编程基础
-
-描述：
-在本练习中，您将学习如何定义类和创建对象，理解面向对象编程的基本概念。
-
-请补全下面的Student类，实现相关方法。
-"""
-
 class Student:
     """
     学生类
@@ -15,7 +6,7 @@ class Student:
     - __init__: 初始化学生信息
     - print_info: 打印学生信息
     """
-    
+
     def __init__(self, name, age, grade):
         """
         初始化学生对象
@@ -27,7 +18,10 @@ class Student:
         """
         # 请在下方编写代码，完成属性初始化
         pass
-    
+        self.name = name
+        self.age = age
+        self.grade = grade
+
     def print_info(self):
         """
         打印学生信息
@@ -40,7 +34,8 @@ class Student:
         """
         # 请在下方编写代码，完成打印学生信息的功能
         pass
-    
+        print(f"姓名: {self.name}, 年龄: {self.age}, 成绩: {self.grade}")
+
     def is_passing(self):
         """
         判断学生是否通过考试
@@ -53,7 +48,7 @@ class Student:
         """
         # 请在下方编写代码，完成判断功能
         pass
-
+        return self.grade >= 60
 
 def create_student_example():
     """
@@ -66,4 +61,7 @@ def create_student_example():
     # 创建一个Student对象，设置姓名为"张三"，年龄为18，成绩为85
     # 调用print_info()方法打印学生信息
     # 返回创建的Student对象
-    pass 
+    pass
+    student = Student("张三", 18, 85)
+    student.print_info()
+    return student
